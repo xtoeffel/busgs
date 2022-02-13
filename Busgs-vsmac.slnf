@@ -1,0 +1,15 @@
+{
+  "solution": {
+    "path": "Busgs.sln",
+    "projects": [
+		"Busgs.Shared\\Busgs.Shared.shproj",
+
+
+		"Busgs.Wasm\\Busgs.Wasm.csproj",
+
+
+		"Busgs.Skia.Gtk\\Busgs.Skia.Gtk.csproj",
+
+    ]
+  }
+}

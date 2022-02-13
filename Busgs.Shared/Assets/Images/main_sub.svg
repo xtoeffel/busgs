@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg533"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="main_sub.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview535"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:zoom="3.1108586"
+     inkscape:cx="357.61831"
+     inkscape:cy="660.58933"
+     inkscape:window-width="3840"
+     inkscape:window-height="2050"
+     inkscape:window-x="1878"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs530" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#333333;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 31.554123,102.74227 H 58.94072 c 0,0 7.909796,0.3402 11.737115,5.35824 3.82732,5.01804 17.520619,37.25258 17.520619,37.25258 l -9.100516,2.8067 -11.992269,-28.32216 c 0,0 -1.512045,-4.29913 -3.742269,-5.95361 -2.391556,-1.77417 -2.29639,-1.61598 -4.592783,-2.04123 -2.29639,-0.42526 -27.896906,-0.59537 -27.896906,-0.59537 z"
+       id="path1175"
+       sodipodi:nodetypes="ccscccsscc" />
+    <path
+       id="rect1978"
+       style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round"
+       d="M 222.76758 388.31641 C 222.76758 388.31641 252.66345 389.60254 267.12891 408.56836 C 269.23109 411.32456 272.13709 416.30143 275.54102 422.71289 L 485.39648 422.71289 L 485.39648 388.31641 L 222.76758 388.31641 z "
+       transform="scale(0.26458333)" />
+    <circle
+       style="fill:#87aade;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.388118;stroke-linecap:round"
+       id="path5114"
+       cx="87.943298"
+       cy="195.44846"
+       r="15.720112" />
+    <path
+       id="path1175-1"
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 278.26367 714.27344 A 59.414596 59.414596 0 0 0 272.96875 738.70312 A 59.414596 59.414596 0 0 0 273.61523 747.39844 C 288.66303 747.72788 300.79715 748.14646 303.61328 748.66797 C 312.29255 750.27521 311.93373 749.67725 320.97266 756.38281 C 329.40183 762.63597 335.11719 778.88477 335.11719 778.88477 L 342.84961 797.14844 A 59.414596 59.414596 0 0 0 373.28516 781.76758 C 363.06805 759.94905 353.61047 741.07018 348.61719 734.52344 C 334.15173 715.55765 304.25781 714.27344 304.25781 714.27344 L 278.26367 714.27344 z "
+       transform="scale(0.26458333)" />
+    <path
+       id="rect1978-5"
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round"
+       d="M 304.25586 714.27148 C 304.25586 714.27148 334.15173 715.55762 348.61719 734.52344 C 350.71936 737.27966 353.62538 742.25649 357.0293 748.66797 L 390.92383 748.66797 A 59.414596 59.414596 0 0 0 391.79883 738.70312 A 59.414596 59.414596 0 0 0 386.53711 714.27148 L 304.25586 714.27148 z "
+       transform="scale(0.26458333)" />
+    <circle
+       style="fill:#009cd0;fill-opacity:1;stroke:none;stroke-width:0.388118;stroke-linecap:round"
+       id="path5114-2"
+       cx="143.99226"
+       cy="197.74484"
+       r="15.720112"
+       inkscape:export-filename="C:\Users\xtof\monodev\python\usgs\kivy\graphics\main.png"
+       inkscape:export-xdpi="484.72949"
+       inkscape:export-ydpi="484.72949" />
+    <path
+       id="path1175-1-8"
+       style="fill:#1a1a1a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 129.6729,191.28124 a 15.720112,15.720112 0 0 0 -1.40095,6.46369 15.720112,15.720112 0 0 0 0.17105,2.30063 c 3.9814,0.0872 7.19189,0.19792 7.93699,0.3359 2.29639,0.42525 2.20145,0.26704 4.593,2.04122 2.23022,1.65448 3.74241,5.95364 3.74241,5.95364 l 2.04587,4.83226 a 15.720112,15.720112 0 0 0 8.05273,-4.06952 c -2.70327,-5.77282 -5.20559,-10.76785 -6.52673,-12.50001 -3.82732,-5.01803 -11.73675,-5.35781 -11.73675,-5.35781 z"
+       inkscape:export-filename="C:\Users\xtof\monodev\python\usgs\kivy\graphics\main.png"
+       inkscape:export-xdpi="484.72949"
+       inkscape:export-ydpi="484.72949" />
+    <path
+       id="rect1978-5-8"
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round"
+       d="m 136.55,191.28072 c 0,0 7.90995,0.34029 11.73727,5.35833 0.5562,0.72925 1.32508,2.04604 2.22571,3.74241 h 8.96792 a 15.720112,15.720112 0 0 0 0.23151,-2.63653 15.720112,15.720112 0 0 0 -1.39216,-6.46421 z"
+       inkscape:export-filename="C:\Users\xtof\monodev\python\usgs\kivy\graphics\main.png"
+       inkscape:export-xdpi="484.72949"
+       inkscape:export-ydpi="484.72949" />
+  </g>
+</svg>

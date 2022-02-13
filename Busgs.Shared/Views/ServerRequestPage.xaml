@@ -1,0 +1,238 @@
+<!-- **********************************************************************
+ Copyright 2022 Christof Dittmar
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+********************************************************************** -->
+
+<Page
+    x:Class="Busgs.Views.ServerRequest"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Busgs.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="using:Busgs.ViewModel"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Key="PanelTileStyle" TargetType="Panel">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Background" Value="#5050504d"/>
+            <Setter Property="Padding" Value="20"/>
+        </Style>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+        <Style x:Key="GridContentTileStyle" TargetType="Grid">
+            <Setter Property="MinWidth" Value="150"/>
+            <Setter Property="BorderBrush" Value="#505050"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="20"/>        
+        </Style>        
+        <Style x:Key="ScrollViewerContentTileStyle" TargetType="ScrollViewer">
+            <Setter Property="MinWidth" Value="150"/>
+            <Setter Property="BorderBrush" Value="#505050"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="20"/> 
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        </Style>
+
+        <Style x:Key="NotificationListViewStyle" TargetType="ListView">
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="IsItemClickEnabled" Value="True"/>
+            <Setter Property="ItemTemplate" Value="{StaticResource NotificationListItem}"/>
+            <Setter Property="ItemContainerStyle" Value="{StaticResource NotificationListItemStyle}"/>
+            <Setter Property="SelectionMode" Value="None"/>
+            <Setter Property="IsItemClickEnabled" Value="False"/>
+        </Style>
+        <Style x:Key="NotificationListItemStyle" TargetType="ListViewItem">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="MinHeight" Value="20"/>
+            <Setter Property="Width" Value="Auto"/>
+        </Style>
+        <DataTemplate x:Key="NotificationListItem" 
+            x:DataType="viewmodel:Notification" 
+            TargetType="ListViewItem">
+            <TextBlock Text="{x:Bind MessageWithErrorStatus}" 
+                HorizontalAlignment="Stretch"
+                HorizontalTextAlignment="Left"
+                TextWrapping="NoWrap" 
+                TextTrimming="WordEllipsis"
+                Margin="0" Padding="0"
+                Height="Auto"
+                Width="Auto"
+                Style="{StaticResource BodyTextBlockStyle}"
+                Foreground="{x:Bind Color}"
+                FontWeight="Normal"/>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <!-- TODO: default text in message boxes should be a static resource; to replace by code -->
+    <StackPanel HorizontalAlignment="Center" Spacing="15">
+
+        <TextBlock Name="UseHintTextBlock"
+                    Style="{StaticResource BodyTextBlockStyle}"
+                    Margin="20">
+            Requesting seismic design parameters from the server is easy.
+            Just follow the 3 steps. Subsequent steps will activate 
+            once their preceding step completed successfully.
+        </TextBlock>
+
+        <Grid ColumnSpacing="0" RowSpacing="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- reading input file -->
+            <Panel Name="ReadFileTile" Style="{StaticResource PanelTileStyle}"
+                Grid.Column="0" Grid.Row="0">
+                <Button x:Name="selectInputFileButton"
+                        Click="OnClick_SelectInputFileButton"
+                        Style="{StaticResource ButtonStyle}">
+                    <Image Source="/Assets/Images/open_file.svg"/>
+                </Button>
+            </Panel>
+            <ScrollViewer Grid.Column="1" Grid.Row="0" 
+                Name="userHintViewerReadFile"
+                Visibility="{x:Bind Path=ViewModel.ReadingUserHintsVisibility, Mode=OneWay}"
+                Style="{StaticResource ScrollViewerContentTileStyle}">
+                <TextBlock TextWrapping="Wrap">
+                    <Bold>1.</Bold> - Read an <Italic>Excel</Italic> file with the parameters you wish to request.
+                    <LineBreak/>
+                    <LineBreak/>Here's an 
+                    <Hyperlink Click="OnClick_WriteSampleInputFileLink">example</Hyperlink>
+                    of an input file.
+                    Your file will be read and the data stored in memory. 
+                    Rest assured that your data will not be transferred anywhere else other than to the 
+                    USGS server. 
+                </TextBlock>
+            </ScrollViewer>
+            <ScrollViewer Grid.Column="1" Grid.Row="0"
+                Visibility="{x:Bind Path=ViewModel.ReadingNotesVisibility, Mode=OneWay}"
+                Name="notificationViewerReadFile"
+                Style="{StaticResource ScrollViewerContentTileStyle}">
+                <ListView Style="{StaticResource NotificationListViewStyle}"
+                    ItemsSource="{x:Bind ViewModel.ReadingNotes}"/>
+            </ScrollViewer>
+
+            <!-- server request -->
+            <Panel Name="RequestFromServerTile" Style="{StaticResource PanelTileStyle}"
+                            Grid.Column="0" Grid.Row="1">
+                <Button x:Name="requestFromServerButton"
+                        Click="OnClick_RequestFromServerButton"
+                        IsEnabled="{x:Bind Path=ViewModel.IsRequestingEnabled, Mode=OneWay}"
+                        Style="{StaticResource ButtonStyle}">
+                    <Image Source="/Assets/Images/server.svg"/>
+                </Button>
+            </Panel>
+            <ScrollViewer Grid.Column="1" Grid.Row="1" 
+                Name="userHintViewerRequestFromServer"
+                Visibility="{x:Bind Path=ViewModel.RequestingUserHintsVisibility, Mode=OneWay}"
+                Style="{StaticResource ScrollViewerContentTileStyle}">
+                <TextBlock TextWrapping="Wrap">
+                    <Bold>2.</Bold> - Request the seismic design parameters from the server.
+                    <LineBreak/>
+                    <LineBreak/>The server request might take a while depending on the 
+                    connection speed and number of sets.
+                </TextBlock>
+            </ScrollViewer>
+            <Grid Grid.Column="1" Grid.Row="1" 
+                Name="notificationsViewerRequestFromServer"
+                Visibility="{x:Bind Path=ViewModel.RequestingNotesVisibility, Mode=OneWay}"
+                Style="{StaticResource GridContentTileStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ProgressBar Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                    Width="Auto" Margin="20"
+                    Maximum="1.0"
+                    Visibility="Visible"
+                    IsIndeterminate="{x:Bind Path=ViewModel.IsCompilingServerResponses, Mode=OneWay}"
+                    Foreground="{x:Bind Path=ViewModel.ProgressBarColor, Mode=OneWay}"
+                    Value="{x:Bind Path=RequestAction.ProgressValue, Mode=OneWay}"/>
+                <!-- TODO: implement cancel button .. or remove as this seem not to work on single thread WASM -->
+                <!-- <Button Grid.Column="1" Grid.Row="0"
+                    Width="Auto" Height="30"
+                    IsEnabled="{x:Bind Path=RequestAction.IsCancelable, Mode=OneWay}"
+                    Click="OnClick_CancelServerRequest"
+                    Name="requestFromServerCancelButton" Content="Cancel"/> -->
+                <ListView Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                    Height="60"
+                    Style="{StaticResource NotificationListViewStyle}"
+                    ItemsSource="{x:Bind ViewModel.RequestingNotes}"/>
+            </Grid>
+
+            <!-- saving output file -->
+            <Panel Name="SaveFileTile" Style="{StaticResource PanelTileStyle}"
+                            Grid.Column="0" Grid.Row="2">
+                <Button x:Name="saveResultFileButton"
+                        IsEnabled="{x:Bind Path=ViewModel.IsSavingEnabled, Mode=OneWay}"
+                        Click="OnClick_SaveFileButton"
+                        Style="{StaticResource ButtonStyle}">
+                    <Image Source="/Assets/Images/save_file.svg"/>
+                </Button>
+            </Panel>
+            <ScrollViewer Grid.Column="1" Grid.Row="2"
+                Name="userHintViewerSaveFile"
+                Visibility="{x:Bind Path=ViewModel.SavingUserHintsVisibility, Mode=OneWay}"
+                Style="{StaticResource ScrollViewerContentTileStyle}">
+                <TextBlock TextWrapping="Wrap">
+                    <Bold>3.</Bold> - Save the received seismic design parameters to an <Italic>Excel</Italic> file.
+                    <LineBreak/>
+                    <LineBreak/>Save the file on whatever resource like local or remote 
+                    storage (<Italic>OneDrive</Italic>).
+                </TextBlock>
+            </ScrollViewer>
+            <ScrollViewer Grid.Column="1" Grid.Row="2"
+                Name="notificationsViewerSaveFile"
+                Visibility="{x:Bind Path=ViewModel.SavingNotesVisibility, Mode=OneWay}"
+                Style="{StaticResource ScrollViewerContentTileStyle}">
+                <ListView Style="{StaticResource NotificationListViewStyle}"
+                    ItemsSource="{x:Bind ViewModel.SavingNotes}"/>
+            </ScrollViewer>
+
+        </Grid>
+
+    </StackPanel>
+</Page>

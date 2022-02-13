@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="auto"
+   height="auto"
+   viewBox="0 0 31.44046 31.440224"
+   version="1.1"
+   id="svg533"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="busgs_logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview535"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="-277.09392"
+     inkscape:cy="-28.28801"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs530" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-128.27195,-182.02473)">
+    <circle
+       style="fill:#009cd0;fill-opacity:1;stroke:none;stroke-width:0.388118;stroke-linecap:round"
+       id="path5114-2"
+       cx="143.99226"
+       cy="197.74484"
+       r="15.720112"
+       inkscape:export-filename="C:\Users\xtof\monodev\python\usgs\kivy\graphics\main.png"
+       inkscape:export-xdpi="484.72949"
+       inkscape:export-ydpi="484.72949" />
+    <path
+       id="path1175-1-8"
+       style="fill:#1a1a1a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 129.6729,191.28124 a 15.720112,15.720112 0 0 0 -1.40095,6.46369 15.720112,15.720112 0 0 0 0.17105,2.30063 c 3.9814,0.0872 7.19189,0.19792 7.93699,0.3359 2.29639,0.42525 2.20145,0.26704 4.593,2.04122 2.23022,1.65448 3.74241,5.95364 3.74241,5.95364 l 2.04587,4.83226 a 15.720112,15.720112 0 0 0 8.05273,-4.06952 c -2.70327,-5.77282 -5.20559,-10.76785 -6.52673,-12.50001 -3.82732,-5.01803 -11.73675,-5.35781 -11.73675,-5.35781 z"
+       inkscape:export-filename="C:\Users\xtof\monodev\python\usgs\kivy\graphics\main.png"
+       inkscape:export-xdpi="484.72949"
+       inkscape:export-ydpi="484.72949" />
+    <path
+       id="rect1978-5-8"
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round"
+       d="m 136.55,191.28072 c 0,0 7.90995,0.34029 11.73727,5.35833 0.5562,0.72925 1.32508,2.04604 2.22571,3.74241 h 8.96792 a 15.720112,15.720112 0 0 0 0.23151,-2.63653 15.720112,15.720112 0 0 0 -1.39216,-6.46421 z"
+       inkscape:export-filename="C:\Users\xtof\monodev\python\usgs\kivy\graphics\main.png"
+       inkscape:export-xdpi="484.72949"
+       inkscape:export-ydpi="484.72949" />
+  </g>
+</svg>

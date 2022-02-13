@@ -1,0 +1,42 @@
+[
+    {
+        "RefDoc": "IBC-2012",
+        "Latitude": 34.1,
+        "Longitude": -118.03,
+        "RiskCategory": "III",
+        "SiteClass": "D",
+        "Title": "Example IBC-2012"
+    },
+    {
+        "RefDoc": "IBC-2015",
+        "Latitude": 34.1,
+        "Longitude": -118.03,
+        "RiskCategory": "III",
+        "SiteClass": "D",
+        "Title": "Example IBC-2015"
+    },
+    {
+        "RefDoc": "ASCE7-05",
+        "Latitude": 34.1,
+        "Longitude": -118.03,
+        "RiskCategory": "III",
+        "SiteClass": "D",
+        "Title": "Example ASCE7-05"
+    },
+    {
+        "RefDoc": "ASCE7-10",
+        "Latitude": 34.1,
+        "Longitude": -118.03,
+        "RiskCategory": "III",
+        "SiteClass": "D",
+        "Title": "Example ASCE7-10"
+    },
+    {
+        "RefDoc": "ASCE7-16",
+        "Latitude": 34.1,
+        "Longitude": -118.03,
+        "RiskCategory": "III",
+        "SiteClass": "D",
+        "Title": "Example ASCE7-16"
+    }
+]

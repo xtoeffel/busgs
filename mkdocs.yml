@@ -1,0 +1,11 @@
+site_name: busgs
+site_author: Christof Dittmar
+
+nav:
+  - Home: index.md
+  - Get started: getstarted.md
+  - Use: request.md
+  - Known Issues: known_issues.md
+
+
+theme: readthedocs
